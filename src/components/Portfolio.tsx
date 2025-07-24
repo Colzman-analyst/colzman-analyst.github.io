@@ -1,7 +1,7 @@
 import { ArrowDown, Twitter, Facebook, Instagram, Github, Sparkles, TrendingUp, Database } from "lucide-react";
-import dataCleaningImg from "@/assets/data-cleaning-project.jpg";
-import sqlAnalysisImg from "@/assets/sql-analysis-project.jpg";
-import powerbiImg from "@/assets/powerbi-dashboard.jpg";
+import dataCleaningImg from "@/assets/data-cleaning-sql.jpg";
+import sqlAnalysisImg from "@/assets/sql-exploratory-analysis.jpg";
+import powerbiImg from "@/assets/powerbi-dashboards.jpg";
 
 const Portfolio = () => {
   return (
