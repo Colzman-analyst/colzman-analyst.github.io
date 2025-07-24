@@ -1,4 +1,7 @@
 import { ArrowDown, Twitter, Facebook, Instagram, Github, Sparkles, TrendingUp, Database } from "lucide-react";
+import dataCleaningImg from "@/assets/data-cleaning-project.jpg";
+import sqlAnalysisImg from "@/assets/sql-analysis-project.jpg";
+import powerbiImg from "@/assets/powerbi-dashboard.jpg";
 
 const Portfolio = () => {
   return (
@@ -81,15 +84,15 @@ const Portfolio = () => {
         {/* Featured Project */}
         <article className="mb-20 animate-scale-in">
           <div className="group bg-card/50 backdrop-blur-sm rounded-3xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
-            <div className="aspect-video bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[conic-gradient(from_45deg,transparent,hsl(142_76%_36%_/_0.1),transparent)]"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-8xl font-black text-primary/20 group-hover:text-primary/30 transition-colors duration-500 group-hover:scale-110 transform">
-                  <Database className="w-24 h-24" />
-                </div>
-              </div>
+            <div className="aspect-video relative overflow-hidden">
+              <img 
+                src={dataCleaningImg} 
+                alt="Data Cleaning SQL Project"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
               <div className="absolute top-6 left-6">
-                <span className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary font-semibold text-sm">
+                <span className="px-4 py-2 bg-primary/90 backdrop-blur-sm border border-primary/20 rounded-full text-primary-foreground font-semibold text-sm">
                   Featured Project
                 </span>
               </div>
@@ -125,13 +128,13 @@ const Portfolio = () => {
         {/* Project Grid */}
         <div className="grid md:grid-cols-2 gap-8 animate-fade-in">
           <article className="group bg-card/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2">
-            <div className="aspect-video bg-gradient-to-br from-primary/5 to-secondary/10 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,hsl(142_76%_36%_/_0.05)_50%,transparent_75%)]"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-6xl font-bold text-primary/30 group-hover:text-primary/50 transition-all duration-500 group-hover:scale-110">
-                  <Database className="w-16 h-16" />
-                </div>
-              </div>
+            <div className="aspect-video relative overflow-hidden">
+              <img 
+                src={sqlAnalysisImg} 
+                alt="SQL Exploratory Analysis Project"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
@@ -160,13 +163,13 @@ const Portfolio = () => {
           </article>
 
           <article className="group bg-card/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-2">
-            <div className="aspect-video bg-gradient-to-br from-accent/10 to-primary/5 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,hsl(142_76%_36%_/_0.1),transparent_50%)]"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-6xl font-bold text-primary/30 group-hover:text-primary/50 transition-all duration-500 group-hover:scale-110">
-                  <TrendingUp className="w-16 h-16" />
-                </div>
-              </div>
+            <div className="aspect-video relative overflow-hidden">
+              <img 
+                src={powerbiImg} 
+                alt="Power BI Dashboard Project"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent"></div>
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
