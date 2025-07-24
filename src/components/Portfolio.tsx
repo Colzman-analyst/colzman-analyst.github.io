@@ -1,7 +1,8 @@
-import { ArrowDown, Twitter, Facebook, Instagram, Github, Sparkles, TrendingUp, Database } from "lucide-react";
+import { ArrowDown, Twitter, Facebook, Instagram, Github, Sparkles, TrendingUp, Database, FileSpreadsheet } from "lucide-react";
 import dataCleaningImg from "@/assets/data-cleaning-sql.jpg";
 import sqlAnalysisImg from "@/assets/sql-exploratory-analysis.jpg";
 import powerbiImg from "@/assets/powerbi-dashboards.jpg";
+import excelProjectsImg from "@/assets/excel-projects.jpg";
 
 const Portfolio = () => {
   return (
@@ -197,6 +198,109 @@ const Portfolio = () => {
             </div>
           </article>
         </div>
+
+        {/* Excel Projects Section */}
+        <section className="mt-32 animate-fade-in">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+              Excel Projects
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive data analysis and visualization projects leveraging Microsoft Excel's powerful capabilities
+            </p>
+          </div>
+
+          <article className="group bg-card/40 backdrop-blur-sm rounded-3xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
+            <div className="aspect-video relative overflow-hidden">
+              <img 
+                src={excelProjectsImg} 
+                alt="Excel Projects - Data Analysis and Dashboards"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
+              <div className="absolute top-6 left-6">
+                <span className="px-4 py-2 bg-primary/90 backdrop-blur-sm border border-primary/20 rounded-full text-primary-foreground font-semibold text-sm flex items-center gap-2">
+                  <FileSpreadsheet className="w-4 h-4" />
+                  Excel Expertise
+                </span>
+              </div>
+            </div>
+            
+            <div className="p-10">
+              <h3 className="text-4xl font-bold mb-8 group-hover:text-primary transition-colors duration-300 flex items-center gap-3">
+                Microsoft Excel Projects
+                <Database className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </h3>
+              
+              <div className="grid md:grid-cols-2 gap-12 mb-10">
+                <div>
+                  <h4 className="text-2xl font-semibold mb-6 text-primary">Key Skills & Expertise</h4>
+                  <ul className="space-y-3 text-muted-foreground">
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      Data manipulation and analysis
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      Advanced Excel functions (VLOOKUP, PivotTables, INDEX-MATCH)
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      Data visualization techniques and charting
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      Statistical analysis and forecasting
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      Interactive dashboard creation
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-primary rounded-full"></div>
+                      Automation with macros and VBA
+                    </li>
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 className="text-2xl font-semibold mb-6 text-primary">Project Impact</h4>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    Explore a comprehensive collection of Excel-based projects that demonstrate my expertise in transforming 
+                    raw data into actionable business insights. These projects showcase advanced data manipulation, complex 
+                    formula development, and dynamic visualization techniques that have consistently delivered measurable 
+                    improvements in reporting accuracy and operational efficiency.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    From sophisticated financial models and automated reporting systems to interactive dashboards and 
+                    statistical analysis tools, my Excel projects have empowered organizations to make data-driven 
+                    decisions with confidence and precision.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex flex-wrap gap-3 mb-8">
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Microsoft Excel</span>
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Data Analysis</span>
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Dashboard Design</span>
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Financial Modeling</span>
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">Automation</span>
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">VBA Programming</span>
+              </div>
+              
+              <div className="flex flex-wrap gap-4">
+                <button className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-2xl hover:bg-primary/90 transition-all duration-300 hover:scale-105 font-semibold text-lg group">
+                  View Excel Portfolio
+                  <FileSpreadsheet className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </button>
+                <button className="inline-flex items-center gap-3 px-8 py-4 bg-secondary/80 text-secondary-foreground rounded-2xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium text-lg group">
+                  Download Templates
+                  <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
       </main>
 
       {/* Footer */}
