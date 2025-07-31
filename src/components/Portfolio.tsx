@@ -1,4 +1,5 @@
-import { ArrowDown, Twitter, Facebook, Instagram, Github, Sparkles, TrendingUp, Database, FileSpreadsheet } from "lucide-react";
+import { ArrowDown, Twitter, Instagram, Github, Sparkles, TrendingUp, Database, FileSpreadsheet } from "lucide-react";
+import { Link } from "react-router-dom";
 import dataCleaningImg from "@/assets/data-cleaning-sql.jpg";
 import sqlAnalysisImg from "@/assets/sql-exploratory-analysis.jpg";
 import powerbiImg from "@/assets/powerbi-dashboards.jpg";
@@ -48,23 +49,33 @@ const Portfolio = () => {
                 My Projects
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
-              <a href="#about" className="relative font-medium hover:text-primary transition-colors duration-300 group">
+              <Link to="/about" className="relative font-medium hover:text-primary transition-colors duration-300 group">
                 About Collins
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
+              </Link>
             </div>
-            <div className="flex gap-4">
-              <a href="https://x.com/Colzman1" className="p-2 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300">
-                <Twitter className="w-5 h-5" />
+            {/* Social Links in Navigation */}
+            <div className="flex gap-4" aria-label="Social media links">
+              <a
+                href="https://x.com/Colzman1"
+                className="p-2 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
+                aria-label="Visit Collins on X (Twitter)"
+              >
+                <Twitter className="w-5 h-5" aria-hidden="true" />
               </a>
-              <a href="#" className="p-2 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300">
-                <Facebook className="w-5 h-5" />
+              <a
+                href="https://www.instagram.com/_asapbrooo/?next=%2F"
+                className="p-2 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
+                aria-label="Visit Collins on Instagram"
+              >
+                <Instagram className="w-5 h-5" aria-hidden="true" />
               </a>
-              <a href="https://www.instagram.com/_asapbrooo/?next=%2F" className="p-2 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="https://github.com/Colzman-analyst" className="p-2 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300">
-                <Github className="w-5 h-5" />
+              <a
+                href="https://github.com/Colzman-analyst"
+                className="p-2 hover:text-primary hover:bg-primary/10 rounded-lg transition-all duration-300"
+                aria-label="Visit Collins on GitHub"
+              >
+                <Github className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
           </div>
@@ -174,7 +185,7 @@ const Portfolio = () => {
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
-                <a href="https://app.powerbi.com/groups/me/list?experience=power-bi" className="flex items-center gap-2">
+                <a href="https://github.com/Colzman-analyst/all-power-bi-dashboards-" className="flex items-center gap-2">
                   Power BI Dashboards
                   <ArrowDown className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rotate-[-45deg]" />
                 </a>
@@ -189,7 +200,7 @@ const Portfolio = () => {
                 <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium">Visualization</span>
               </div>
               <a 
-                href="https://app.powerbi.com/groups/me/list?experience=power-bi" 
+                href="https://github.com/Colzman-analyst/all-power-bi-dashboards-" 
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary/80 text-secondary-foreground rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium group"
               >
                 View Dashboards
@@ -216,10 +227,13 @@ const Portfolio = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent"></div>
               <div className="absolute top-6 left-6">
-                <span className="px-4 py-2 bg-primary/90 backdrop-blur-sm border border-primary/20 rounded-full text-primary-foreground font-semibold text-sm flex items-center gap-2">
+                <a
+                  href="https://github.com/Colzman-analyst/All-excel-projects"
+                  className="px-4 py-2 bg-primary/90 backdrop-blur-sm border border-primary/20 rounded-full text-primary-foreground font-semibold text-sm flex items-center gap-2"
+                >
                   <FileSpreadsheet className="w-4 h-4" />
                   Excel Expertise
-                </span>
+                </a>
               </div>
             </div>
             
@@ -244,17 +258,37 @@ const Portfolio = () => {
                 <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">VBA Programming</span>
               </div>
               
-              <a 
-                href="#" 
+              {/* Excel Projects Section Button */}
+              <a
+                href="https://github.com/Colzman-analyst/All-excel-projects"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-secondary/80 text-secondary-foreground rounded-xl hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium group"
+                aria-label="View Excel Portfolio on GitHub"
               >
                 View Excel Portfolio
-                <FileSpreadsheet className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                <FileSpreadsheet className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
               </a>
             </div>
           </article>
         </section>
       </main>
+
+      {/* About Section */}
+      <section id="about" className="max-w-4xl mx-auto my-32 px-6 py-12 bg-card/60 rounded-3xl shadow-lg border border-border/50 animate-fade-in">
+        <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+          About Collins
+        </h2>
+        <p className="text-lg text-muted-foreground leading-relaxed text-left">
+          <div>I am Collins, a passionate data analyst based in Abuja, Nigeria. I am a meticulous data analyst with an aptitude for transforming complex datasets into valuable insights and actionable strategies. I excel in leveraging data-driven methodologies to drive informed decision-making and optimize organizational performance.</div><br />
+         <div>My passion lies in making use of data to create impactful solutions that address business challenges and improve operational efficiency. I as well love to add value to every organization. I thrive on crafting intuitive and user-centric data visualization and reports that facilitate understanding and drive business growth.</div><br />
+         <div>With a strong foundation in mathematics, I bring a unique perspective to data analysis, combining my problem solving skills, optimize model performance, interpret complex data that answer business questions with a keen eye for pattern and trends. I am proficient in utilizing tools such as PowerBI, Microsoft Excel and SQL to extract, clean and analyze data, delivering meaningful findings that drive strategic initiatives.</div> <br />
+         <div>As a proactive learner, I am committed to staying abreast of emerging technologies and methodologies in data analysis. I am adept at translating complex technical concepts into clear and concise insights, making data accessible and actionable for stakeholders at all levels.</div> <br />
+         <div>I am driven by a commitment to excellence, always striving to deliver high-quality work that exceeds expectations. I am a strong communicator and collaborator, capable of working effectively both independently and as part of a team. If you are seeking a highly motivated data analyst with a dedication towards delivering impactful solutions and driving business value through data-driven decision-making, I am eager to contribute to your team. Let’s connect to explore how I can support your organization’s data needs and goals.</div> 
+
+
+
+
+        </p>
+      </section>
 
       {/* Footer */}
       <footer className="relative mt-32 bg-gradient-to-b from-background to-card/50 border-t border-border/50">
@@ -276,8 +310,13 @@ const Portfolio = () => {
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 Phone
               </h3>
+              {/* Contact Info */}
               <p className="text-muted-foreground">
-                <a href="tel:+2348173289915" className="hover:text-primary transition-colors duration-300">
+                <a
+                  href="tel:+2348173289915"
+                  className="hover:text-primary transition-colors duration-300"
+                  aria-label="Call Collins at (234) 817 328 9915"
+                >
                   (234) 817 328 9915
                 </a>
               </p>
@@ -288,7 +327,11 @@ const Portfolio = () => {
                 Email
               </h3>
               <p className="text-muted-foreground">
-                <a href="mailto:iorbeeterver@gmail.com" className="hover:text-primary transition-colors duration-300">
+                <a
+                  href="mailto:iorbeeterver@gmail.com"
+                  className="hover:text-primary transition-colors duration-300"
+                  aria-label="Email Collins at iorbeeterver@gmail.com"
+                >
                   iorbeeterver@gmail.com
                 </a>
               </p>
@@ -298,18 +341,28 @@ const Portfolio = () => {
                 <div className="w-2 h-2 bg-primary rounded-full"></div>
                 Connect
               </h3>
-              <div className="flex gap-4">
-                <a href="https://x.com/Colzman1" className="p-3 bg-card/50 hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300 hover:scale-110">
-                  <Twitter className="w-5 h-5" />
+              {/* Social Links in Footer */}
+              <div className="flex gap-4" aria-label="Social media links">
+                <a
+                  href="https://x.com/Colzman1"
+                  className="p-3 bg-card/50 hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300 hover:scale-110"
+                  aria-label="Visit Collins on X (Twitter)"
+                >
+                  <Twitter className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="#" className="p-3 bg-card/50 hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300 hover:scale-110">
-                  <Facebook className="w-5 h-5" />
+                <a
+                  href="https://www.instagram.com/_asapbrooo/?next=%2F"
+                  className="p-3 bg-card/50 hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300 hover:scale-110"
+                  aria-label="Visit Collins on Instagram"
+                >
+                  <Instagram className="w-5 h-5" aria-hidden="true" />
                 </a>
-                <a href="https://www.instagram.com/_asapbrooo/?next=%2F" className="p-3 bg-card/50 hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300 hover:scale-110">
-                  <Instagram className="w-5 h-5" />
-                </a>
-                <a href="https://github.com/Colzman-analyst" className="p-3 bg-card/50 hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300 hover:scale-110">
-                  <Github className="w-5 h-5" />
+                <a
+                  href="https://github.com/Colzman-analyst"
+                  className="p-3 bg-card/50 hover:bg-primary/10 hover:text-primary rounded-xl transition-all duration-300 hover:scale-110"
+                  aria-label="Visit Collins on GitHub"
+                >
+                  <Github className="w-5 h-5" aria-hidden="true" />
                 </a>
               </div>
             </div>
