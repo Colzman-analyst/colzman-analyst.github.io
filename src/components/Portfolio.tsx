@@ -112,7 +112,7 @@ const Portfolio = () => {
             <div className="p-10">
               <h2 className="text-4xl font-bold mb-6 group-hover:text-primary transition-colors duration-300">
                 <a href="https://github.com/Colzman-analyst/Data-Cleaning-with-SQL" className="flex items-center gap-3">
-                  Data Cleaning in SQL
+                  Data Cleaning in SQL and Python
                   <TrendingUp className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </a>
               </h2>
@@ -151,7 +151,7 @@ const Portfolio = () => {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
                 <a href="https://github.com/Colzman-analyst/Exploratory-analysis-with-SQL" className="flex items-center gap-2">
-                  Exploratory Analysis in SQL
+                  Exploratory Analysis in SQL and Python
                   <ArrowDown className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rotate-[-45deg]" />
                 </a>
               </h3>
