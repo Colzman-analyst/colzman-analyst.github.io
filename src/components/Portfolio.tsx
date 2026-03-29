@@ -192,10 +192,10 @@ const Portfolio = () => {
               className="p-2 text-slate-400 hover:text-cyan-400 transition-colors rounded-lg hover:bg-cyan-400/10">
               <Github className="w-4 h-4" />
             </a>
-            <a href="https://www.linkedin.com/in/collins-iorbee-22a125214/" target="_blank" rel="noopener noreferrer"
+            <a href="/Collins_Iorbee_CV.pdf" download="Collins_Iorbee_CV.pdf"
               className="text-sm font-medium px-4 py-2.5 rounded-md transition-all hover:-translate-y-0.5 border"
               style={{ borderColor: "rgba(0,212,255,0.2)", color: "#e8edf5", background: "transparent" }}>
-              View CV
+              Download CV ↓
             </a>
             <a href="mailto:iorbeeterver@gmail.com"
               className="text-sm font-semibold px-5 py-2.5 rounded-md transition-all hover:-translate-y-0.5"
@@ -258,10 +258,10 @@ const Portfolio = () => {
                 style={{ borderColor: "rgba(0,212,255,0.2)", background: "transparent" }}>
                 Get In Touch
               </a>
-              <a href="https://www.linkedin.com/in/collins-iorbee-22a125214/" target="_blank" rel="noopener noreferrer"
+              <a href="/Collins_Iorbee_CV.pdf" download="Collins_Iorbee_CV.pdf"
                 className="font-medium text-sm px-8 py-3.5 rounded-md transition-all hover:-translate-y-0.5"
                 style={{ borderColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.08)", color: "#7a8a9e", background: "transparent" }}>
-                View CV ↗
+                Download CV ↓
               </a>
             </div>
 
