@@ -123,7 +123,7 @@ const Portfolio = () => {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 40);
-      const ids = ["hero", "projects", "about"];
+      const ids = ["hero", "projects", "about", "skills", "achievements", "certifications", "contact"];
       for (const id of [...ids].reverse()) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 220) { setActiveSection(id); break; }
@@ -192,8 +192,13 @@ const Portfolio = () => {
               className="p-2 text-slate-400 hover:text-cyan-400 transition-colors rounded-lg hover:bg-cyan-400/10">
               <Github className="w-4 h-4" />
             </a>
+            <a href="https://www.linkedin.com/in/collins-iorbee-22a125214/" target="_blank" rel="noopener noreferrer"
+              className="text-sm font-medium px-4 py-2.5 rounded-md transition-all hover:-translate-y-0.5 border"
+              style={{ borderColor: "rgba(0,212,255,0.2)", color: "#e8edf5", background: "transparent" }}>
+              View CV
+            </a>
             <a href="mailto:iorbeeterver@gmail.com"
-              className="ml-2 text-sm font-semibold px-5 py-2.5 rounded-md transition-all hover:-translate-y-0.5"
+              className="text-sm font-semibold px-5 py-2.5 rounded-md transition-all hover:-translate-y-0.5"
               style={{ background: "#00d4ff", color: "#080c12" }}>
               Hire Me
             </a>
@@ -252,6 +257,11 @@ const Portfolio = () => {
                 className="font-medium text-sm px-8 py-3.5 rounded-md transition-all hover:-translate-y-0.5 border text-white"
                 style={{ borderColor: "rgba(0,212,255,0.2)", background: "transparent" }}>
                 Get In Touch
+              </a>
+              <a href="https://www.linkedin.com/in/collins-iorbee-22a125214/" target="_blank" rel="noopener noreferrer"
+                className="font-medium text-sm px-8 py-3.5 rounded-md transition-all hover:-translate-y-0.5"
+                style={{ borderColor: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.08)", color: "#7a8a9e", background: "transparent" }}>
+                View CV ↗
               </a>
             </div>
 
@@ -532,6 +542,80 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
+
+      {/* ── ACHIEVEMENTS ── */}
+      <section id="achievements" style={{ background: "#080c12" }}>
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <Reveal>
+            <span className="text-xs font-semibold uppercase tracking-widest mb-3 block" style={{ color: "#00d4ff" }}>Impact</span>
+            <h2 className="font-black tracking-tight mb-3" style={{ fontSize: "clamp(2rem,4vw,2.8rem)", letterSpacing: "-0.03em" }}>Key Achievements</h2>
+            <p className="font-light mb-12 max-w-lg" style={{ color: "#7a8a9e", lineHeight: 1.7 }}>Real numbers from real work — measurable outcomes delivered for businesses and people.</p>
+          </Reveal>
+          <div className="grid md:grid-cols-2 gap-4">
+            {[
+              { num: "30%", label: "Data accuracy improvement", desc: "Achieved at Cress Pharmaceuticals by automating SQL pipelines that standardised patient and financial data across clinical systems.", color: "#00d4ff" },
+              { num: "50%", label: "Reporting time reduction", desc: "Cut weekly reporting time in half by building interactive Excel Pivot dashboards enabling faster insights for executive review.", color: "#00d4ff" },
+              { num: "50+", label: "Students trained in data analytics", desc: "Designed and delivered a 2-month online bootcamp teaching Excel, Power BI and SQL across 3 live sessions per week.", color: "#00d4ff" },
+              { num: "25%", label: "Healthcare reporting reliability gain", desc: "Improved data quality at Cress Pharmaceuticals through rigorous audits detecting anomalies in patient records.", color: "#00d4ff" },
+              { num: "0.851", label: "AUC score on churn prediction model", desc: "Built a Random Forest model on 7,000+ customer records achieving strong predictive performance on unseen test data.", color: "#00d4ff" },
+              { num: "3+", label: "Recurring reports produced weekly", desc: "Tracked revenue, treatment progress and patient engagement at Cress Pharmaceuticals supporting strategic business planning.", color: "#00d4ff" },
+            ].map((a, i) => (
+              <Reveal key={a.label} delay={i * 0.06}>
+                <div className="flex gap-5 p-5 rounded-xl transition-all duration-200 hover:-translate-y-1"
+                  style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(0,212,255,0.1)" }}>
+                  <div className="font-black shrink-0" style={{ fontSize: "2rem", color: a.color, lineHeight: 1, minWidth: 72 }}>{a.num}</div>
+                  <div>
+                    <div className="font-semibold text-sm text-white mb-1 capitalize">{a.label}</div>
+                    <div className="text-xs font-light leading-relaxed" style={{ color: "#7a8a9e" }}>{a.desc}</div>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CERTIFICATIONS ── */}
+      <section id="certifications" style={{ background: "#0d1420" }}>
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          <Reveal>
+            <span className="text-xs font-semibold uppercase tracking-widest mb-3 block" style={{ color: "#00d4ff" }}>Training & Credentials</span>
+            <h2 className="font-black tracking-tight mb-3" style={{ fontSize: "clamp(2rem,4vw,2.8rem)", letterSpacing: "-0.03em" }}>Certifications</h2>
+            <p className="font-light mb-12 max-w-lg" style={{ color: "#7a8a9e", lineHeight: 1.7 }}>Formal training and certifications that underpin my technical skill set.</p>
+          </Reveal>
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              { title: "Data Analytics Training", issuer: "AfriHub Centre for Excellence", date: "2023", location: "Abuja, Nigeria (Physical)", status: "Completed", desc: "4 months of intensive hands-on training covering data analysis, SQL, Excel, Power BI and data storytelling." },
+              { title: "B.Tech — Industrial Mathematics & Statistics", issuer: "Federal University of Technology, Minna", date: "Expected 2025", location: "Nigeria", status: "In Progress", desc: "Strong foundation in statistical modelling, time-series forecasting, machine learning and applied mathematics." },
+              { title: "Microsoft PL-300 — Power BI Associate", issuer: "Microsoft Learn", date: "In Progress", location: "Online", status: "Pursuing", desc: "Industry-recognised certification validating Power BI data modelling, visualisation and reporting skills." },
+            ].map((cert, i) => (
+              <Reveal key={cert.title} delay={i * 0.08}>
+                <div className="rounded-xl p-5 h-full flex flex-col gap-3 transition-all duration-200 hover:-translate-y-1"
+                  style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(0,212,255,0.1)" }}>
+                  <div className="flex justify-between items-start gap-3">
+                    <div className="font-bold text-sm text-white leading-snug">{cert.title}</div>
+                    <span className="shrink-0 text-xs font-semibold px-2.5 py-1 rounded-full"
+                      style={{
+                        background: cert.status === "Completed" ? "rgba(34,197,94,0.12)" : "rgba(0,212,255,0.1)",
+                        color: cert.status === "Completed" ? "#4ade80" : "#00d4ff",
+                        border: cert.status === "Completed" ? "1px solid rgba(74,222,128,0.25)" : "1px solid rgba(0,212,255,0.2)",
+                      }}>
+                      {cert.status}
+                    </span>
+                  </div>
+                  <div className="text-xs font-semibold" style={{ color: "#00d4ff" }}>{cert.issuer}</div>
+                  <div className="flex gap-3 text-xs" style={{ color: "#7a8a9e" }}>
+                    <span>{cert.date}</span>
+                    <span>·</span>
+                    <span>{cert.location}</span>
+                  </div>
+                  <div className="text-xs font-light leading-relaxed mt-auto" style={{ color: "#7a8a9e" }}>{cert.desc}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ── CONTACT ── */}
       <section style={{ background: "#0d1420" }}>
