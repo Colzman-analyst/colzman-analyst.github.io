@@ -319,7 +319,7 @@ const Portfolio = () => {
             <div className="p-8 md:p-10 relative">
               <div className="absolute top-6 right-6 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border"
                 style={{ background: "rgba(0,212,255,0.12)", borderColor: "rgba(0,212,255,0.3)", color: "#00d4ff" }}>
-                ★ Latest Project
+                ★ ML Project
               </div>
               <div className="flex flex-wrap gap-2 mb-4">
                 {["R", "Machine Learning", "Fintech", "Random Forest"].map(t => (
@@ -341,6 +341,42 @@ const Portfolio = () => {
                 ))}
               </div>
               <span className="inline-flex items-center gap-2 font-semibold text-sm" style={{ color: "#00d4ff" }}>
+                View on GitHub ↗
+              </span>
+            </div>
+          </a>
+        </Reveal>
+
+        {/* NEW — Fraud Detection */}
+        <Reveal delay={0.06}>
+          <a href="https://github.com/Colzman-analyst/fraud-detection" target="_blank" rel="noopener noreferrer"
+            className="group block mb-6 rounded-2xl overflow-hidden border transition-all duration-300 hover:-translate-y-1.5"
+            style={{ background: "rgba(255,107,107,0.03)", border: "1px solid rgba(255,107,107,0.25)" }}>
+            <div className="p-8 md:p-10 relative">
+              <div className="absolute top-6 right-6 text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border"
+                style={{ background: "rgba(255,107,107,0.12)", borderColor: "rgba(255,107,107,0.3)", color: "#ff6b6b" }}>
+                ★ ML Project
+              </div>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {["Python", "XGBoost", "SMOTE", "Fintech", "Random Forest"].map(t => (
+                  <span key={t} className="text-xs font-semibold px-2.5 py-1 rounded" style={{ background: "rgba(255,107,107,0.1)", color: "#ff6b6b" }}>{t}</span>
+                ))}
+              </div>
+              <h3 className="font-black mb-3 text-white" style={{ fontSize: "1.8rem", letterSpacing: "-0.02em" }}>
+                Financial Transaction Fraud Detection
+              </h3>
+              <p className="font-light mb-8 max-w-2xl" style={{ color: "#7a8a9e", lineHeight: 1.8 }}>
+                Compared Logistic Regression, Random Forest and XGBoost on 284,807 credit card transactions. Handled extreme class imbalance (0.17% fraud rate) with SMOTE. Delivered full business cost analysis — $9,638 fraud value caught per batch with lowest false alarm rate.
+              </p>
+              <div className="flex flex-wrap gap-8 mb-8 pb-8" style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                {[{ val: "0.9756", label: "ROC AUC" }, { val: "81.05%", label: "Recall" }, { val: "284K+", label: "Transactions" }, { val: "$9,638", label: "Fraud Value Caught" }].map(m => (
+                  <div key={m.label}>
+                    <div className="font-black" style={{ fontSize: "1.4rem", color: "#ff6b6b" }}>{m.val}</div>
+                    <div className="text-xs uppercase tracking-wider" style={{ color: "#7a8a9e" }}>{m.label}</div>
+                  </div>
+                ))}
+              </div>
+              <span className="inline-flex items-center gap-2 font-semibold text-sm" style={{ color: "#ff6b6b" }}>
                 View on GitHub ↗
               </span>
             </div>
